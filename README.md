@@ -1,6 +1,6 @@
 # Sync Atom settings to a git repo
 
-![CI](https://github.com/UziTech/sync-settings-git-location/workflows/CI/badge.svg)
+[![CI](https://github.com/UziTech/sync-settings-git-location/workflows/CI/badge.svg)](https://github.com/UziTech/sync-settings-git-location/actions)
 
 Synchronize settings, keymaps, user styles, init script, snippets and installed packages across [Atom](https://atom.io) instances to git repository.
 
