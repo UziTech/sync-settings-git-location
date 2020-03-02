@@ -1,0 +1,60 @@
+{
+  "name": "sync-settings-folder-location",
+  "main": "./lib/main",
+  "version": "1.0.0",
+  "description": "Sync-Settings backup to local folder.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UziTech/sync-settings-folder-location"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UziTech/sync-settings-folder-location/issues"
+  },
+  "commits": {
+    "url": "https://github.com/UziTech/sync-settings-folder-location/commit"
+  },
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "keywords": [
+    "sync",
+    "settings",
+    "backup",
+    "restore",
+    "local",
+    "folder",
+    "directory",
+    "sync-settings",
+    "location"
+  ],
+  "scripts": {
+    "test": "atom --test ./spec",
+    "lint": "eslint ."
+  },
+  "atomTestRunner": "./spec/runner",
+  "providedServices": {
+    "sync-settings-location": {
+      "versions": {
+        "1.0.0": "provideLocationService"
+      }
+    }
+  },
+  "dependencies": {
+    "etch": "^0.14.0",
+    "fs-extra": "^8.1.0",
+    "marked": "^0.8.0"
+  },
+  "devDependencies": {
+    "@semantic-release/apm-config": "^8.0.0",
+    "atom-jasmine3-test-runner": "^4.4.3",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-standard": "^4.0.1",
+    "semantic-release": "^17.0.4"
+  }
+}
