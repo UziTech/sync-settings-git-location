@@ -29,7 +29,9 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_PAT }}
       run: |
-        apm i sync-settings &&
+        git config --global user.email "test@example.com"
+        git config --global user.name "test"
+        apm install sync-settings
         atom --test spec
 
   Lint:
