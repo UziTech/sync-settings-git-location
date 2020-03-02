@@ -41,6 +41,30 @@ describe('git', () => {
 		})
 	})
 
+	it('add, get, delete files in a directory', async () => {
+		await git.update({
+			'dir\\test.txt': {
+				content: 'test',
+			},
+		})
+
+		const data = await git.get()
+		expect(data.files).toEqual(jasmine.objectContaining({
+			'dir\\test.txt': jasmine.objectContaining({
+				content: 'test',
+			}),
+		}))
+
+		await git.update({
+			'dir\\test.txt': {
+				content: '',
+			},
+		})
+
+		const data2 = await git.get()
+		expect(data2.files).toEqual({})
+	})
+
 	xit('creates a git', async () => {
 		// TODO:
 	})
