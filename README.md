@@ -1,18 +1,17 @@
-# Sync Atom settings to a local folder
+# Sync Atom settings to a git repo
 
-![CI](https://github.com/UziTech/sync-settings-folder-location/workflows/CI/badge.svg)
+![CI](https://github.com/UziTech/sync-settings-git-location/workflows/CI/badge.svg)
 
-Synchronize settings, keymaps, user styles, init script, snippets and installed packages across [Atom](https://atom.io) instances to local folder.
-
-This may be useful for storing your backup in Google Drive or Dropbox.
+Synchronize settings, keymaps, user styles, init script, snippets and installed packages across [Atom](https://atom.io) instances to git repository.
 
 ## Installation
 
 This is a service package for [Sync-Settings](https://atom.io/packages/sync-settings). You will need Sync-Settings installed for this package to do anything.
 
 1. Install [Sync-Settings](https://atom.io/packages/sync-settings).
-2. Install [Sync-Settings-folder-location](https://atom.io/packages/sync-settings-folder-location).
+2. Install [Sync-Settings-git-location](https://atom.io/packages/sync-settings-git-location).
 3. Go To the Sync-Settings [settings page](atom://config/packages/sync-settings).
 4. Check `Use Other Backup Location`.
-5. Run command `sync-settings:create-backup` to create the backup location.
-5. Run command `sync-settings:backup` to backup your settings.
+5. Create a [new repository](https://github.com/new). We recommend making it **private**.
+6. Enter the url in the `Git URL` setting on the `sync-settings-git-location` [settings page](atom://config/packages/sync-settings-git-location)
+7. Run command `sync-settings:backup` to backup your settings.

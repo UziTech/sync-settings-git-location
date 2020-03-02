@@ -1,18 +1,18 @@
 {
-  "name": "sync-settings-folder-location",
+  "name": "sync-settings-git-location",
   "main": "./lib/main",
   "version": "1.0.0",
-  "description": "Sync-Settings backup to local folder.",
+  "description": "Sync-Settings backup to git repo.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/UziTech/sync-settings-folder-location"
+    "url": "https://github.com/UziTech/sync-settings-git-location"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/UziTech/sync-settings-folder-location/issues"
+    "url": "https://github.com/UziTech/sync-settings-git-location/issues"
   },
   "commits": {
-    "url": "https://github.com/UziTech/sync-settings-folder-location/commit"
+    "url": "https://github.com/UziTech/sync-settings-git-location/commit"
   },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
@@ -22,9 +22,8 @@
     "settings",
     "backup",
     "restore",
-    "local",
-    "folder",
-    "directory",
+    "git",
+    "repo",
     "sync-settings",
     "location"
   ],
