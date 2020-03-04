@@ -33,12 +33,11 @@ describe('git', () => {
 		const data3 = await git.get()
 		expect(data3).toEqual({
 			files: {
-				'init.coffee': jasmine.objectContaining({
-					content: '# init',
-				}),
+				'init.coffee': jasmine.any(Object),
 			},
 			time: jasmine.stringMatching(/^\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ$/),
 		})
+		expect(data3.files['init.coffee'].content.toString()).toBe('# init')
 	})
 
 	it('add, get, delete files in a directory', async () => {
@@ -50,10 +49,9 @@ describe('git', () => {
 
 		const data = await git.get()
 		expect(data.files).toEqual(jasmine.objectContaining({
-			'dir\\test.txt': jasmine.objectContaining({
-				content: 'test',
-			}),
+			'dir\\test.txt': jasmine.any(Object),
 		}))
+		expect(data.files['dir\\test.txt'].content.toString()).toBe('test')
 
 		await git.update({
 			'dir\\test.txt': {
