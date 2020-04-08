@@ -1,7 +1,7 @@
 {
   "name": "sync-settings-git-location",
   "main": "./lib/main",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Sync-Settings backup to git repo.",
   "repository": {
     "type": "git",
