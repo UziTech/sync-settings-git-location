@@ -42,7 +42,7 @@
   "dependencies": {
     "etch": "^0.14.0",
     "fs-extra": "^9.0.0",
-    "marked": "^0.8.2"
+    "marked": "^1.0.0"
   },
   "devDependencies": {
     "@semantic-release/apm-config": "^8.0.0",
