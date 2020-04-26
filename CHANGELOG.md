@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/UziTech/sync-settings-git-location/compare/v1.0.4...v1.0.5) (2020-04-26)
+
+
+### Bug Fixes
+
+* **deps:** update dependency marked to v1 ([d3d1aff](https://github.com/UziTech/sync-settings-git-location/commit/d3d1aff0458289a34700ddd8fab6f0e5ffd10610))
+
 ## [1.0.4](https://github.com/UziTech/sync-settings-git-location/compare/v1.0.3...v1.0.4) (2020-04-08)
 
 
