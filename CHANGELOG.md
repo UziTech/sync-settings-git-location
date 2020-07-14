@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/UziTech/sync-settings-git-location/compare/v1.0.7...v1.0.8) (2020-07-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency marked to ^1.1.1 ([a27903e](https://github.com/UziTech/sync-settings-git-location/commit/a27903ee6405f26517bae2ae5d67a06a5639072f))
+
 ## [1.0.7](https://github.com/UziTech/sync-settings-git-location/compare/v1.0.6...v1.0.7) (2020-06-04)
 
 
