@@ -4,6 +4,7 @@ const fs = require('fs-extra')
 const git = require('../lib/git')
 const util = require('util')
 const exec = util.promisify(require('child_process').exec)
+const InputView = require('../lib/views/input-view')
 const { config } = require('../lib/config')
 
 function setDefaultConfig (prefix = 'sync-settings-git-location', obj = config) {
@@ -89,6 +90,46 @@ describe('git', () => {
 
 		const log = await exec('git log -1 --format=%B', { cwd: gitUrl })
 		expect(log.stdout.trim()).toBe(commitMessage)
+	})
+
+	it('uses commit message input config', async () => {
+		atom.config.set('sync-settings-git-location.commitMessagePrompt', true)
+		const commitMessage = 'test message'
+		spyOn(InputView.prototype, 'getInput').and.callFake(function () {
+			this.resolve()
+			return commitMessage
+		})
+
+		await git.update({
+			'dir\\test.txt': {
+				content: 'test',
+			},
+		})
+
+		const log = await exec('git log -1 --format=%B', { cwd: gitUrl })
+		expect(log.stdout.trim()).toBe(commitMessage)
+	})
+
+	it('cancels on input cancel', async () => {
+		atom.config.set('sync-settings-git-location.commitMessagePrompt', true)
+		spyOn(InputView.prototype, 'getInput').and.callFake(function () {
+			this.resolve()
+			return undefined
+		})
+
+		await git.update({
+			'dir\\test.txt': {
+				content: 'test',
+			},
+		})
+
+		let error
+		try {
+			await exec('git log -1 --format=%B', { cwd: gitUrl })
+		} catch (ex) {
+			error = ex
+		}
+		expect(error).toEqual(jasmine.stringMatching('does not have any commits'))
 	})
 
 	xit('creates a git', async () => {
