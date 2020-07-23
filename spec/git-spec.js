@@ -4,16 +4,30 @@ const fs = require('fs-extra')
 const git = require('../lib/git')
 const util = require('util')
 const exec = util.promisify(require('child_process').exec)
+const { config } = require('../lib/config')
+
+function setDefaultConfig (prefix = 'sync-settings-git-location', obj = config) {
+	for (const name in obj) {
+		const configPath = `${prefix}.${name}`
+		if (obj[name].type === 'object' && 'properties' in obj[name]) {
+			setDefaultConfig(configPath, obj[name].properties)
+		} else if ('default' in obj[name]) {
+			atom.config.set(configPath, obj[name].default)
+		}
+	}
+}
 
 describe('git', () => {
+	let gitUrl
 	beforeEach(async () => {
-		const gitUrl = await fs.mkdtemp(path.join(os.tmpdir(), 'sync-settings-git-bare-repo-'))
+		setDefaultConfig()
+
+		gitUrl = await fs.mkdtemp(path.join(os.tmpdir(), 'sync-settings-git-bare-repo-'))
 		await exec('git init --bare', { cwd: gitUrl })
 		atom.config.set('sync-settings-git-location.gitUrl', gitUrl)
 	})
 
 	afterEach(async () => {
-		const gitUrl = atom.config.get('sync-settings-git-location.gitUrl')
 		if (gitUrl) {
 			await fs.remove(gitUrl)
 		}
@@ -61,6 +75,20 @@ describe('git', () => {
 
 		const data2 = await git.get()
 		expect(data2.files).toEqual({})
+	})
+
+	it('uses commit message config', async () => {
+		const commitMessage = 'a commit message with symbols ";\'\n\nand new lines'
+		atom.config.set('sync-settings-git-location.commitMessage', commitMessage)
+
+		await git.update({
+			'dir\\test.txt': {
+				content: 'test',
+			},
+		})
+
+		const log = await exec('git log -1 --format=%B', { cwd: gitUrl })
+		expect(log.stdout.trim()).toBe(commitMessage)
 	})
 
 	xit('creates a git', async () => {
