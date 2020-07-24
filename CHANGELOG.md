@@ -1,3 +1,16 @@
+# [1.1.0](https://github.com/UziTech/sync-settings-git-location/compare/v1.0.8...v1.1.0) (2020-07-24)
+
+
+### Bug Fixes
+
+* check diff before commit ([d7825f5](https://github.com/UziTech/sync-settings-git-location/commit/d7825f5606b20ee6a78e5c1666c9a0e61129d82f))
+
+
+### Features
+
+* add commit message prompt setting ([2f00c00](https://github.com/UziTech/sync-settings-git-location/commit/2f00c00576e7d02538cefeff5c48d037bd78fdcd))
+* add commit message setting ([e414333](https://github.com/UziTech/sync-settings-git-location/commit/e4143338cca43527405bb08bea3d1bed4a90d66b))
+
 ## [1.0.8](https://github.com/UziTech/sync-settings-git-location/compare/v1.0.7...v1.0.8) (2020-07-14)
 
 
