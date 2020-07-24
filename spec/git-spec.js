@@ -132,6 +132,33 @@ describe('git', () => {
 		expect(error).toEqual(jasmine.stringMatching('does not have any commits'))
 	})
 
+	it('show success on nothing to commit', async () => {
+		const returns = []
+		returns.push(await git.update({}))
+
+		returns.push(await git.update({
+			'dir\\test.txt': {
+				content: 'test',
+			},
+		}))
+
+		atom.notifications.clear()
+
+		returns.push(await git.update({
+			'dir\\test.txt': {
+				content: 'test',
+			},
+		}))
+
+		expect(returns[0]).toBeUndefined()
+		expect(returns[1]).toBeDefined()
+		expect(returns[2]).toBeUndefined()
+
+		const notifications = atom.notifications.getNotifications()
+		expect(notifications.length).toBe(1)
+		expect(notifications[0].type).toBe('success')
+	})
+
 	xit('creates a git', async () => {
 		// TODO:
 	})
