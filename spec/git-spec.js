@@ -4,7 +4,7 @@ const fs = require('fs-extra')
 const git = require('../lib/git')
 const util = require('util')
 const exec = util.promisify(require('child_process').exec)
-const InputView = require('../lib/views/input-view')
+const { InputView } = require('atom-modal-views')
 const { config } = require('../lib/config')
 
 function setDefaultConfig (prefix = 'sync-settings-git-location', obj = config) {
