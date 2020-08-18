@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/UziTech/sync-settings-git-location/compare/v1.1.0...v1.1.1) (2020-08-18)
+
+
+### Bug Fixes
+
+* use atom-input-views for modal input ([e1763e8](https://github.com/UziTech/sync-settings-git-location/commit/e1763e8320364c80ac1351f772803f315f069a4c))
+
 # [1.1.0](https://github.com/UziTech/sync-settings-git-location/compare/v1.0.8...v1.1.0) (2020-07-24)
 
 
