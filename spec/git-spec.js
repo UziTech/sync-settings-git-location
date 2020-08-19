@@ -159,7 +159,7 @@ describe('git', () => {
 		expect(notifications[0].type).toBe('success')
 	})
 
-	xit('creates a git', async () => {
+	xit('creates a git repo', async () => {
 		// TODO:
 	})
 
