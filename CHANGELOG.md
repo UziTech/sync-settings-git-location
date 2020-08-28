@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/UziTech/sync-settings-git-location/compare/v1.1.2...v1.1.3) (2020-08-28)
+
+
+### Bug Fixes
+
+* better error messages ([4de1110](https://github.com/UziTech/sync-settings-git-location/commit/4de11101701b856eaf7f7eb55f4483d1fe8a50e8))
+
 ## [1.1.2](https://github.com/UziTech/sync-settings-git-location/compare/v1.1.1...v1.1.2) (2020-08-19)
 
 
