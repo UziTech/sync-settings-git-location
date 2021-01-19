@@ -1,3 +1,10 @@
+## [1.1.9](https://github.com/UziTech/sync-settings-git-location/compare/v1.1.8...v1.1.9) (2021-01-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency fs-extra to ^9.1.0 ([3805df5](https://github.com/UziTech/sync-settings-git-location/commit/3805df5b07cb1e1023b8db9d734452cc01233ff1))
+
 ## [1.1.8](https://github.com/UziTech/sync-settings-git-location/compare/v1.1.7...v1.1.8) (2020-12-11)
 
 
