@@ -40,7 +40,7 @@
     }
   },
   "dependencies": {
-    "atom-modal-views": "^1.0.6",
+    "atom-modal-views": "^1.0.7",
     "fs-extra": "^9.1.0"
   },
   "devDependencies": {
