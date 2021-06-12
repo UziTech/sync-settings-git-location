@@ -1,3 +1,10 @@
+## [1.1.13](https://github.com/UziTech/sync-settings-git-location/compare/v1.1.12...v1.1.13) (2021-06-12)
+
+
+### Bug Fixes
+
+* throw error on git auth prompts ([#156](https://github.com/UziTech/sync-settings-git-location/issues/156)) ([e8dfb97](https://github.com/UziTech/sync-settings-git-location/commit/e8dfb978431f721df0bf15302e5dac5bc35bc70d))
+
 ## [1.1.12](https://github.com/UziTech/sync-settings-git-location/compare/v1.1.11...v1.1.12) (2021-05-04)
 
 
