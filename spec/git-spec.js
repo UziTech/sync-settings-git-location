@@ -25,7 +25,9 @@ describe('git', () => {
 
 		gitUrl = await fs.mkdtemp(path.join(os.tmpdir(), 'sync-settings-git-bare-repo-'))
 		await exec('git init --bare', { cwd: gitUrl })
+		await exec('git branch main', { cwd: gitUrl })
 		atom.config.set('sync-settings-git-location.gitUrl', gitUrl)
+		//atom.config.set('sync-settings-git-location.gitBranch', "master")  < -- set this if your git doesn't have "main" as default branch
 	})
 
 	afterEach(async () => {
