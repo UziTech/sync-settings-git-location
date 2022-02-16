@@ -40,17 +40,17 @@
     }
   },
   "dependencies": {
-    "atom-modal-views": "^1.0.24",
+    "atom-modal-views": "^1.0.26",
     "fs-extra": "^10.0.0"
   },
   "devDependencies": {
     "@semantic-release/apm-config": "^9.0.1",
-    "atom-jasmine3-test-runner": "^5.2.9",
+    "atom-jasmine3-test-runner": "^5.2.11",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
-    "semantic-release": "^18.0.1"
+    "semantic-release": "^19.0.2"
   }
 }
