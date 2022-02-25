@@ -74,7 +74,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
       - name: NPM install
@@ -91,7 +91,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: UziTech/action-setup-atom@v1
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 'lts/*'
       - name: NPM install
