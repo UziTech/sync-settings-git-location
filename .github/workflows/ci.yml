@@ -36,8 +36,9 @@ jobs:
         git config --global user.name "test"
         atom --test spec
 
-  # Ubuntu beta is failing because of process not closing when stdin sent
+  # Ubuntu stable is failing because of process not closing when stdin sent
   # I think it is a node 12 issue
+  # remove this when v1.61.0 is stable
   TestLinux:
     strategy:
       matrix:
