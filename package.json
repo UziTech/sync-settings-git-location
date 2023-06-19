@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "atom-modal-views": "^1.0.28",
-    "fs-extra": "^10.1.0"
+    "fs-extra": "^11.1.1"
   },
   "devDependencies": {
     "@semantic-release/apm-config": "^9.0.1",
