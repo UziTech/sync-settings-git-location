@@ -51,6 +51,6 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.5.0",
     "eslint-plugin-promise": "^6.0.0",
-    "semantic-release": "^19.0.5"
+    "semantic-release": "^21.1.1"
   }
 }
